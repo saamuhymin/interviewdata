@@ -1,8 +1,8 @@
 import streamlit as st 
 import numpy as np 
 import pandas as pd
-
 import matplotlib.pyplot as plt
+from PIL import Image
 from matplotlib import pyplot as plt
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
@@ -18,15 +18,20 @@ from sklearn.metrics import classification_report
 
 
 
-st.title('Machine Learning - CLASSIFICATION')
+st.title('Machine Learning (Classification)')
 
-st.sidebar.write("""
-This is a Web App demo using python libraries such as Streamlit, Sklearn etc
+st.sidebar.header("""
+This is an amateur Web App using python libraries such as Streamlit, Sklearn etc.   
 """)
 
-st.sidebar.write ("For more info, please contact:")
+st.sidebar.write ("Feel free to flex your codes to me. For more info, we could get in touch through:")
 
-st.sidebar.write("<a href='https://www.linkedin.com/in/saamuhymin/'>Br. Syed Ahmad Abdul Muhaimin bin Syed Nazmi </a>", unsafe_allow_html=True)
+image = Image.open('passp.png')
+st.image(image)
+
+st.sidebar.write("<a href='https://www.linkedin.com/in/saamuhymin/'>Br. Sam </a>", unsafe_allow_html=True)
+
+   
     
 data = pd.read_csv(r'https://raw.githubusercontent.com/saamuhymin/interviewdata/main/Interview.csv')
 
