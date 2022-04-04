@@ -29,6 +29,8 @@ st.sidebar.image(image)
 
 st.sidebar.write("<a href='https://www.linkedin.com/in/saamuhymin/'>Br. Abdul Muhaimin </a>", unsafe_allow_html=True)   
     
+st.sidebar.write("You can view the dataset (.csv) by clicking <a href='https://drive.google.com/file/d/167yCiUxk-Inc4iGUjvebQQD2ne1TQZSi/view?usp=sharing>here </a>", unsafe_allow_html=True)    
+    
 data = pd.read_csv(r'https://raw.githubusercontent.com/saamuhymin/interviewdata/main/Interview.csv')
 
 data = data.drop(['Have you obtained the necessary permission to start at the required time','Hope there will beNounScheduledmeetings','Can I Call you three hours before the interview and follow up on your attendance for the interview','Can I have an alternative number/ desk number. I assure you that I will Not trouble you too much','Have you taken a printout of your updated resume. Have you read the JD and understood the same','Are you clear with the venue details and the landmark.','Has the call letter been shared'], axis=1)
