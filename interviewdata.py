@@ -31,7 +31,7 @@ st.sidebar.write("<a href='https://www.linkedin.com/in/saamuhymin/%27%3E' style=
 
 st.sidebar.write("Get the dataset from <a href='https://drive.google.com/file/d/167yCiUxk-Inc4iGUjvebQQD2ne1TQZSi/view?usp=sharing' >here </a>. Use the scroll wheel button to view it in a new tab.", unsafe_allow_html=True)
 
-st.sidebar.write("You may also refer to my beloved mentor, <a href='https://www.linkedin.com/in/yong-poh-yu/'>Ts Dr. Yu Yong Poh </a> &  <a href='https://www.linkedin.com/in/yyanbin-tan/'>Dr Tan Yan Bin</a>", unsafe_allow_html=True
+st.sidebar.write("You may also refer to my beloved mentor, <a href='https://www.linkedin.com/in/yong-poh-yu/'>Ts Dr. Yu Yong Poh </a> &  <a href='https://www.linkedin.com/in/yyanbin-tan/'>Dr Tan Yan Bin</a>", unsafe_allow_html=True)
 
 data = pd.read_csv(r'https://raw.githubusercontent.com/saamuhymin/interviewdata/main/Interview.csv')
 
