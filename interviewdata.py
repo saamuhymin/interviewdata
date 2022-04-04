@@ -59,7 +59,7 @@ data['Marital Status'] = labelencoder10.fit_transform(data['Marital Status'])
 
 
 X = data.drop(['Observed Attendance'], axis=1)
-y = data('Observed Attendance')
+y = data['Observed Attendance']
 
 classifier_name = st.sidebar.selectbox(
     'Select classifier',
