@@ -8,12 +8,10 @@ from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import StandardScaler
-
 from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
-
 from sklearn.metrics import classification_report
 
 
@@ -29,7 +27,7 @@ st.sidebar.write ("Feel free to flex your codes to me. For more info, we could g
 image = Image.open('passpo.png')
 st.sidebar.image(image)
 
-st.sidebar.write("<a style='text-align: center;' href='https://www.linkedin.com/in/saamuhymin/'>Br. Sam </a>", unsafe_allow_html=True)   
+st.sidebar.write("<a href='https://www.linkedin.com/in/saamuhymin/'>Br. Abdul Muhaimin </a>", unsafe_allow_html=True)   
     
 data = pd.read_csv(r'https://raw.githubusercontent.com/saamuhymin/interviewdata/main/Interview.csv')
 
