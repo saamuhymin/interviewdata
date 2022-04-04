@@ -155,7 +155,7 @@ if len(X) <2:
   suitable = 0
 else:
     for names in X:
-        if names in cat_var:
+        if names:
            st.write("<font color='Aquamarine'>Note: No PCA plot as it only supports numerical predictors.</font>", unsafe_allow_html=True)
            suitable = 0
            break
