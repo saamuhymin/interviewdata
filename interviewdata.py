@@ -21,17 +21,19 @@ from sklearn.metrics import classification_report
 st.title('Machine Learning - CLASSIFICATION')
 
 st.sidebar.write("""
-This is a web app demo using python libraries such as Streamlit, Sklearn etc
+This is a Web App demo using python libraries such as Streamlit, Sklearn etc
 """)
 
 st.sidebar.write ("For more info, please contact:")
 
-st.sidebar.write("<a href='https://www.linkedin.com/in/yong-poh-yu/'>Dr. Yong Poh Yu </a>", unsafe_allow_html=True)
+st.sidebar.write("<a href='https://www.linkedin.com/in/saamuhymin/'>Br. Syed Ahmad Abdul Muhaimin bin Syed Nazmi </a>", unsafe_allow_html=True)
     
 data = pd.read_csv(r'https://raw.githubusercontent.com/saamuhymin/interviewdata/main/Interview.csv')
 
 data = data.drop(['Have you obtained the necessary permission to start at the required time','Hope there will beNounScheduledmeetings','Can I Call you three hours before the interview and follow up on your attendance for the interview','Can I have an alternative number/ desk number. I assure you that I will Not trouble you too much','Have you taken a printout of your updated resume. Have you read the JD and understood the same','Are you clear with the venue details and the landmark.','Has the call letter been shared'], axis=1)
 data = data.drop(['Client name', 'Name(Cand ID)', 'Location','Date of Interview','Candidate Current Location','Candidate Job Location'], axis=1)
+
+data = data.dropna()
 
 labelencoder1 = LabelEncoder()
 labelencoder2 = LabelEncoder()
@@ -48,13 +50,14 @@ data['Industry'] = labelencoder1.fit_transform(data['Industry'])
 data['Position to be closed'] = labelencoder2.fit_transform(data['Position to be closed'])
 data['Nature of Skillset'] = labelencoder3.fit_transform(data['Nature of Skillset'])
 data['Interview Type'] = labelencoder4.fit_transform(data['Interview Type'])
-data['Gender'] = labelencoder4.fit_transform(data['Gender'])
-data['Interview Venue'] = labelencoder4.fit_transform(data['Interview Venue'])
-data['Candidate Native location'] = labelencoder4.fit_transform(data['Candidate Native location'])
-data['Expected Attendance'] = labelencoder4.fit_transform(data['Expected Attendance'])
-data['Observed Attendance'] = labelencoder4.fit_transform(data['Observed Attendance'])
-data['Marital Status'] = labelencoder4.fit_transform(data['Marital Status'])
-    
+data['Gender'] = labelencoder5.fit_transform(data['Gender'])
+data['Interview Venue'] = labelencoder6.fit_transform(data['Interview Venue'])
+data['Candidate Native location'] = labelencoder7.fit_transform(data['Candidate Native location'])
+data['Expected Attendance'] = labelencoder8.fit_transform(data['Expected Attendance'])
+data['Observed Attendance'] = labelencoder9.fit_transform(data['Observed Attendance'])
+data['Marital Status'] = labelencoder10.fit_transform(data['Marital Status'])
+
+
 X = data.drop('Observed Attendance', axis=1)
 y = data('Observed Attendance')
 
