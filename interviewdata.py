@@ -29,7 +29,10 @@ st.sidebar.write ("For more info, please contact:")
 st.sidebar.write("<a href='https://www.linkedin.com/in/yong-poh-yu/'>Dr. Yong Poh Yu </a>", unsafe_allow_html=True)
     
 data = pd.read_csv(r'https://raw.githubusercontent.com/saamuhymin/interviewdata/main/Interview.csv')
-  
+
+data = data.drop(['Have you obtained the necessary permission to start at the required time','Hope there will beNounScheduledmeetings','Can I Call you three hours before the interview and follow up on your attendance for the interview','Can I have an alternative number/ desk number. I assure you that I will Not trouble you too much','Have you taken a printout of your updated resume. Have you read the JD and understood the same','Are you clear with the venue details and the landmark.','Has the call letter been shared'], axis=1)
+data = data.drop(['Client name', 'Name(Cand ID)', 'Location','Date of Interview','Candidate Current Location','Candidate Job Location'], axis=1)
+
 labelencoder1 = LabelEncoder()
 labelencoder2 = LabelEncoder()
 labelencoder3 = LabelEncoder()
