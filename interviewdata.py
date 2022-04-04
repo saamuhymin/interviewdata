@@ -30,7 +30,9 @@ st.sidebar.image(image)
 st.sidebar.write("<a href='https://www.linkedin.com/in/saamuhymin/%27%3E' style='padding-left:80px;'>Br. Abdul Muhaimin </a>", unsafe_allow_html=True)
 
 st.sidebar.write("Get the dataset from <a href='https://drive.google.com/file/d/167yCiUxk-Inc4iGUjvebQQD2ne1TQZSi/view?usp=sharing' >here </a>. Use the scroll wheel button to view it in a new tab.", unsafe_allow_html=True)
-    
+
+st.sidebar.write("You may also refer to my beloved mentor, <a href='https://www.linkedin.com/in/yong-poh-yu/'>Ts Dr. Yu Yong Poh </a> &  <a href='https://www.linkedin.com/in/yyanbin-tan/'>Dr Tan Yan Bin</a>", unsafe_allow_html=True
+
 data = pd.read_csv(r'https://raw.githubusercontent.com/saamuhymin/interviewdata/main/Interview.csv')
 
 data = data.drop(['Have you obtained the necessary permission to start at the required time','Hope there will beNounScheduledmeetings','Can I Call you three hours before the interview and follow up on your attendance for the interview','Can I have an alternative number/ desk number. I assure you that I will Not trouble you too much','Have you taken a printout of your updated resume. Have you read the JD and understood the same','Are you clear with the venue details and the landmark.','Has the call letter been shared'], axis=1)
