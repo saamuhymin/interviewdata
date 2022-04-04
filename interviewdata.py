@@ -29,7 +29,7 @@ st.sidebar.image(image)
 
 st.sidebar.write("<a href='https://www.linkedin.com/in/saamuhymin/%27%3E' style='padding-left:80px;'>Br. Abdul Muhaimin </a>", unsafe_allow_html=True)
 
-st.sidebar.write("Get the dataset from <a href='https://drive.google.com/file/d/167yCiUxk-Inc4iGUjvebQQD2ne1TQZSi/view?usp=sharing'>here </a>", unsafe_allow_html=True)    
+st.sidebar.write("Get the dataset from <a href='https://drive.google.com/file/d/167yCiUxk-Inc4iGUjvebQQD2ne1TQZSi/view'>here </a>", unsafe_allow_html=True)    
     
 data = pd.read_csv(r'https://raw.githubusercontent.com/saamuhymin/interviewdata/main/Interview.csv')
 
