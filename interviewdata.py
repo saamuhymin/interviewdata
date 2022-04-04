@@ -27,7 +27,7 @@ st.sidebar.write ("Feel free to flex your codes to me. For more info, we could g
 image = Image.open('passpo.png')
 st.sidebar.image(image)
 
-st.sidebar.write("<a href='https://www.linkedin.com/in/saamuhymin/'>Br. Abdul Muhaimin </a>", unsafe_allow_html=True)   
+st.sidebar.write("<h1 "style='text-align';" center;<a href='https://www.linkedin.com/in/saamuhymin/'>Br. Abdul Muhaimin </a>", unsafe_allow_html=True)   
     
 st.sidebar.write("You can view the dataset (.csv) by clicking <a href='https://drive.google.com/file/d/167yCiUxk-Inc4iGUjvebQQD2ne1TQZSi/view?usp=sharing>here'</a>", unsafe_allow_html=True)    
     
