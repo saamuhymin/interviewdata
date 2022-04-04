@@ -27,9 +27,6 @@ This is a web app demo using python libraries such as Streamlit, Sklearn etc
 st.sidebar.write ("For more info, please contact:")
 
 st.sidebar.write("<a href='https://www.linkedin.com/in/yong-poh-yu/'>Dr. Yong Poh Yu </a>", unsafe_allow_html=True)
-
-
-st.write(f"## You Have Selected <font color='Aquamarine'>{choice}</font> Dataset", unsafe_allow_html=True)
     
 data = pd.read_csv(r'https://raw.githubusercontent.com/saamuhymin/interviewdata/main/Interview.csv')
   
