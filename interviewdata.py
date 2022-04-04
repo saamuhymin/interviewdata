@@ -150,11 +150,11 @@ else:
 
 st.write("## 4: Principal Component Analysis Plot")
 suitable = 1
-if len(X_names) <2:
+if len(X) <2:
   st.write("<font color='Aquamarine'>Note: No PCA plot as it requires at least two predictors.</font>", unsafe_allow_html=True)
   suitable = 0
 else:
-    for names in X_names:
+    for names in X:
         if names in cat_var:
            st.write("<font color='Aquamarine'>Note: No PCA plot as it only supports numerical predictors.</font>", unsafe_allow_html=True)
            suitable = 0
