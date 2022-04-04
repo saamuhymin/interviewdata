@@ -30,34 +30,34 @@ st.sidebar.write("<a href='https://www.linkedin.com/in/yong-poh-yu/'>Dr. Yong Po
 
 
 st.write(f"## You Have Selected <font color='Aquamarine'>{choice}</font> Dataset", unsafe_allow_html=True)
+    
+data = pd.read_csv(https://raw.githubusercontent.com/saamuhymin/interviewdata/main/Interview.csv)
+  
+labelencoder1 = LabelEncoder()
+labelencoder2 = LabelEncoder()
+labelencoder3 = LabelEncoder()
+labelencoder4 = LabelEncoder()
+labelencoder5 = LabelEncoder()
+labelencoder6 = LabelEncoder()
+labelencoder7 = LabelEncoder()
+labelencoder8 = LabelEncoder()
+labelencoder9 = LabelEncoder()
+labelencoder10 = LabelEncoder()
 
-def get_default_dataset(name):
-    data = pd.read_csv(https://raw.githubusercontent.com/saamuhymin/interviewdata/main/Interview.csv)
-   
-    labelencoder1 = LabelEncoder()
-    labelencoder2 = LabelEncoder()
-    labelencoder3 = LabelEncoder()
-    labelencoder4 = LabelEncoder()
-    labelencoder5 = LabelEncoder()
-    labelencoder6 = LabelEncoder()
-    labelencoder7 = LabelEncoder()
-    labelencoder8 = LabelEncoder()
-    labelencoder9 = LabelEncoder()
-    labelencoder10 = LabelEncoder()
-
-    data['Industry'] = labelencoder1.fit_transform(data['Industry'])
-    data['Position to be closed'] = labelencoder2.fit_transform(data['Position to be closed'])
-    data['Nature of Skillset'] = labelencoder3.fit_transform(data['Nature of Skillset'])
-    data['Interview Type'] = labelencoder4.fit_transform(data['Interview Type'])
-    data['Gender'] = labelencoder4.fit_transform(data['Gender'])
-    data['Interview Venue'] = labelencoder4.fit_transform(data['Interview Venue'])
-    data['Candidate Native location'] = labelencoder4.fit_transform(data['Candidate Native location'])
-    data['Expected Attendance'] = labelencoder4.fit_transform(data['Expected Attendance'])
-    data['Observed Attendance'] = labelencoder4.fit_transform(data['Observed Attendance'])
-    data['Marital Status'] = labelencoder4.fit_transform(data['Marital Status'])
-
-    y = data.target
-    return X, y
+data['Industry'] = labelencoder1.fit_transform(data['Industry'])
+data['Position to be closed'] = labelencoder2.fit_transform(data['Position to be closed'])
+data['Nature of Skillset'] = labelencoder3.fit_transform(data['Nature of Skillset'])
+data['Interview Type'] = labelencoder4.fit_transform(data['Interview Type'])
+data['Gender'] = labelencoder4.fit_transform(data['Gender'])
+data['Interview Venue'] = labelencoder4.fit_transform(data['Interview Venue'])
+data['Candidate Native location'] = labelencoder4.fit_transform(data['Candidate Native location'])
+data['Expected Attendance'] = labelencoder4.fit_transform(data['Expected Attendance'])
+data['Observed Attendance'] = labelencoder4.fit_transform(data['Observed Attendance'])
+data['Marital Status'] = labelencoder4.fit_transform(data['Marital Status'])
+    
+X = data.drop('Observed Attendance', axis=1)
+y = data('Observed Attendance')
+return X, y
 
 classifier_name = st.sidebar.selectbox(
     'Select classifier',
@@ -83,11 +83,11 @@ st.write("## 2: Summary (y variable)")
 if len(y)==0:
    st.write("<font color='Aquamarine'>Note: Label @ y variable has not been selected.</font>", unsafe_allow_html=True)
 elif len(np.unique(y)) <5:
-     st.write('Number of classes:', len(np.unique(y)))
+     st.write('Observed Attendance:', len(np.unique(y)))
 
 else: 
    st.write("<font color='red'>Warning: System detects an unusual number of unique classes. Please make sure that the label @ y is a categorical variable. Ignore this warning message if you are sure that the y is a categorical variable.</font>", unsafe_allow_html=True)
-   st.write('Number of classes:', len(np.unique(y)))
+   st.write('Observed Attendance:', len(np.unique(y)))
 
 
 def add_parameter_ui(clf_name):
