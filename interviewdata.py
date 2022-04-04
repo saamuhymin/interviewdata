@@ -26,8 +26,8 @@ This is an amateur Web App using python libraries such as Streamlit, Sklearn etc
 
 st.sidebar.write ("Feel free to flex your codes to me. For more info, we could get in touch through:")
 
-image = Image.open('passp.png')
-st.image(image)
+image = Image.open('passpo.png')
+st.sidebar.image(image)
 
 st.sidebar.write("<a href='https://www.linkedin.com/in/saamuhymin/'>Br. Sam </a>", unsafe_allow_html=True)
 
