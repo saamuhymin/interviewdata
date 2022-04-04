@@ -31,7 +31,7 @@ st.sidebar.write("<a href='https://www.linkedin.com/in/yong-poh-yu/'>Dr. Yong Po
 
 st.write(f"## You Have Selected <font color='Aquamarine'>{choice}</font> Dataset", unsafe_allow_html=True)
     
-data = pd.read_csv(https://raw.githubusercontent.com/saamuhymin/interviewdata/main/Interview.csv)
+data = pd.read_csv(r'https://raw.githubusercontent.com/saamuhymin/interviewdata/main/Interview.csv')
   
 labelencoder1 = LabelEncoder()
 labelencoder2 = LabelEncoder()
